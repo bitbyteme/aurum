@@ -1,7 +1,11 @@
 #! /bin/sh
 
+#
+## Basic ubuntu server setup
+#
+
 sudo echo '\c'
-# adding apt-get restricted repositories by editing /etc/apt/sources.list file
+# adding restricted repositories by editing /etc/apt/sources.list file
 if ! [ -f '/etc/apt/sources.list.bak' ]; then  
    sudo chmod 777 /etc/apt
    sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
