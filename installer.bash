@@ -6,13 +6,18 @@
 
 plat="$(uname)"
 GIT_PATH='https://raw.github.com/bitbyteme/aurum/master/'
-urlLinux="$GIT_PATH/installer.ub.server.bash"
-urlMac="$GIT_PATH/installer.lion.bash"
+url_linux="$GIT_PATH/installer.ub.server.bash"
+url-mac="$GIT_PATH/installer.lion.bash"
 
 if [ "$plat" = 'Linux' ]; then
-   python -c "import urllib2; print urllib2.urlopen('$urlLinux').read()" |sh
+   ub_config="$GIT_PATH/installer.ub.config.bash"
+   
+   python -c "import urllib2; print urllib2.urlopen('$url_linux').read()"|sh
+   python -c "import urllib2; print urllib2.urlopen('$ub_config').read()"|sh
+   
+
 elif [ "$plat" = 'Darwin' ]; then
-   python -c "import urllib2; print urllib2.urlopen('$urlMac').read()" |sh
+   python -c "import urllib2; print urllib2.urlopen('$url_mac').read()" |sh
 fi
 
 
