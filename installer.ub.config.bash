@@ -9,4 +9,5 @@
 # git the dotfiles and create symlink
 #
 
+echo "I'm am config"
 
