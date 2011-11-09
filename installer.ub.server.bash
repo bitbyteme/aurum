@@ -4,7 +4,6 @@
 ## Basic ubuntu server setup
 #
 
-sudo echo '\c'
 # adding restricted repositories by editing /etc/apt/sources.list file
 if ! [ -f '/etc/apt/sources.list.bak' ]; then  
    sudo chmod 777 /etc/apt
@@ -20,9 +19,6 @@ pkgsExtra='vim-nox zsh '
 
 sudo apt-get -y install $pkgsBasic $pkgsExtra 
 sudo apt-get -y autoremove
-
-echo 'press enter to reboot, or ^C to quit \c'; read
-reboot
 
 
 
