@@ -7,7 +7,7 @@
 plat="$(uname)"
 GIT_PATH='https://raw.github.com/bitbyteme/aurum/master/'
 url_linux="$GIT_PATH/installer.ub.server.bash"
-url-mac="$GIT_PATH/installer.lion.bash"
+url_mac="$GIT_PATH/installer.lion.bash"
 
 if [ "$plat" = 'Linux' ]; then
    ub_config="$GIT_PATH/installer.ub.config.bash"
