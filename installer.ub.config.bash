@@ -11,4 +11,5 @@
 
 echo "\nI'm am config\n"
 
-echo "\nSup chicken wingz\n"
+#echo "\nSup chicken wingz\n"
+
